@@ -1,0 +1,35 @@
+{
+  "CSB": {
+    "CloseAll": "Close all combat sheets",
+    "Settings": {
+      "AutoSwitch": {
+        "Name": "Follow the turn order",
+        "Hint": "When the turn changes, switch to the sheet of the current combatant. Only combatants with a tab count, so player turns leave the window alone unless player characters are included below."
+      },
+      "IncludePCs": {
+        "Name": "Include player characters",
+        "Hint": "Give player-owned combatants a tab as well. Off by default: the browser is meant for the NPCs you run."
+      },
+      "ClickAway": {
+        "Name": "Minimize on canvas clicks",
+        "Hint": "Clicking into the scene folds the open sheet back into the tab row. Clicks on dialogs, the sidebar and other windows leave it alone."
+      },
+      "AutoCloseDefeated": {
+        "Name": "Close defeated combatants",
+        "Hint": "When a combatant is marked defeated, close its sheet automatically. Its tab stays greyed out either way."
+      },
+      "SyncSize": {
+        "Name": "Match window size across tabs",
+        "Hint": "On: the browser acts like one fixed window. Resize any sheet and every tab you switch to opens at that exact size and position. Off: each sheet keeps its own size, so the window grows or shrinks depending on which tab is open. The Sheet size slider zooms the content either way."
+      },
+      "SheetScale": {
+        "Name": "Sheet size",
+        "Hint": "Zooms actor sheets, everything inside included. 100% is normal size."
+      },
+      "ScaleOutside": {
+        "Name": "Scale sheets outside combat",
+        "Hint": "Apply the sheet size slider to every actor sheet you open, not just the combat browser's. Turning it off returns open non-combat sheets to normal size."
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+/* class prefix csb- predates the rename to Better Combat Sheets */
+.csb-managed {
+  --minimized-width: 168px;
+}
+
+/* tab switches should be instant; near-zero (not zero) keeps the transitionend
+   event firing, which core awaits before it finishes folding a window */
+.application.csb-managed.minimizing,
+.application.csb-managed.maximizing {
+  transition-duration: 0.01s;
+}
+
+/* ghost tab for a combatant whose sheet is not currently rendered */
+.csb-ghost-pill {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: rgba(15, 15, 15, 0.55);
+  border: 1px dashed #666;
+  color: #999;
+  font-size: 12px;
+  font-style: italic;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.csb-ghost-pill:hover {
+  border-color: #aaa;
+  color: #ddd;
+}
+
+.csb-ghost-pill > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.csb-ghost-pill.csb-turn {
+  border-left: 4px solid #ee9b3a;
+}
+
+/* placeholder for a window mid-fold: looks like a settled pill, not a ghost */
+.csb-ghost-pill.csb-solid {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid #555;
+  color: #ddd;
+  font-style: normal;
+}
+
+.csb-ghost-pill.csb-defeated {
+  filter: grayscale(1) brightness(0.8);
+}
+
+.csb-ghost-pill.csb-defeated > span {
+  text-decoration: line-through;
+}
+
+.csb-managed.minimized,
+.csb-managed.minimized .window-header {
+  cursor: pointer;
+}
+
+/* pills match the rounded look of the other tabs; important beats sheet skins */
+.application.csb-managed.minimized,
+.window-app.csb-managed.minimized {
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+
+.csb-managed.minimized .window-header {
+  border: none;
+  border-radius: 6px;
+}
+
+/* whose turn it is: a side stripe, so it never competes with the active tab */
+.csb-managed.csb-turn.minimized,
+.csb-active-pill.csb-turn {
+  border-left: 4px solid #ee9b3a;
+}
+
+.csb-managed.csb-defeated.minimized {
+  filter: grayscale(1) brightness(0.8);
+}
+
+.csb-managed.csb-defeated.minimized .window-title {
+  text-decoration: line-through;
+}
+
+.csb-close-all {
+  position: fixed;
+  z-index: 9999;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid #777;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.csb-close-all:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* stand-in tab for the sheet that is currently open: filled light, like a
+   browser's front tab, so it never looks like just another pill */
+.csb-active-pill {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  width: 168px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: #e8e4dc;
+  border: 1px solid #fff;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.csb-active-pill > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.csb-active-pill.csb-defeated {
+  filter: grayscale(1) brightness(0.8);
+}
+
+.csb-active-pill.csb-defeated > span {
+  text-decoration: line-through;
+}
