@@ -20,7 +20,15 @@ An actor counts as an NPC when no player has Owner permission on it, counting de
 
 ## Installation
 
-Manual for now: copy this repository into your Foundry `Data/modules/` directory as `better-combat-sheets`, then enable **Better Combat Sheets** in your world's Manage Modules.
+In Foundry, open **Add-on Modules > Install Module** and paste this manifest URL:
+
+```
+https://github.com/The-Final-Artificer/better-combat-sheets/releases/latest/download/module.json
+```
+
+Then enable **Better Combat Sheets** in your world's Manage Modules.
+
+Manual alternative: download `module.zip` from the latest release and extract it into your Foundry `Data/modules/better-combat-sheets` folder.
 
 ## Settings
 
