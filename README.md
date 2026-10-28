@@ -1,6 +1,7 @@
 # Better Combat Sheets
 
 Run the whole fight from one window. Every NPC in the active combat becomes a browser-style tab above the character sheet: click to switch, let it follow the turn order, and keep the table clean.
+This module is completely free, but if you want to support me and get some cool modules in the process consider supporting me on Patreon:  https://www.patreon.com/c/TheFinalArtificer
 
 ![Foundry v13](https://img.shields.io/badge/Foundry-v13-informational) ![Foundry v14](https://img.shields.io/badge/Foundry-v14-informational)
 
